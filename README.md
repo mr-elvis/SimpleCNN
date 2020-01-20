@@ -1,6 +1,7 @@
 # Simple Implementation of Convolutional Neural Network (CNN)
 
 ## Introduction
+### Hand Written Digits recognition using the [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
 
 CNN are multi-layer neural networks most commonly applied to analyzing visual imagery. 
 
