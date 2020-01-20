@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jan 20 00:23:04 2020
-
 SIMPLE IMPLEMENTATION OF A CONVOLUTIONAL NEURAL NETWORK
 
 @author: elvis
@@ -17,15 +16,6 @@ from keras.utils import to_categorical
 from keras.layers import Dense, Conv2D, Flatten, MaxPooling2D
 from keras.datasets import mnist
 
-from tensorflow.compat.v1.keras.backend import set_session
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.allow_growth = True  # dynamically grow the memory used on the GPU
-config.log_device_placement = True  # to log device placement (on which device the operation ran)
-sess = tf.compat.v1.Session(config=config)
-set_session(sess)
-
-#os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"]="0" #model will be trained on GPU 0
 # LOAD DATA
 print('Loading and preprocessing Data')
 print('='*50)
@@ -50,6 +40,7 @@ x_test /=255
 
 print('Creating Model')
 print('='*50)
+
 # CREATE MODEL
 model = Sequential()
 model.add(Conv2D(8, kernel_size=(3,3), activation='relu', input_shape=(28,28,1)))
@@ -60,20 +51,26 @@ model.add(Dense(10, activation='softmax'))
 print('Compiling Model')
 print('='*50)
 
+# COMPILE MODEL
 model.compile(optimizer='adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
+
+# PRINT MODEL STRUCTURE
 model.summary()
 
 print('Training model on train data')
 print('='*50)
 
+# TRAIN MODEL ON DATA
 model.fit(x_train, y_train, epochs = 5, batch_size = 20)
 
+# EVALUATE ON TEST DATA
 print('Evaluation Model on Test data')
 print('='*50)
 evaluation_score = model.evaluate(x_test,y_test, verbose=1)
 print('Test Loss:',evaluation_score[0])
 print('Test Accuracy:', evaluation_score[1])
 
+# DO SOME PREDICTION
 print('Prediction on some images from the test set')
 print('='*50)
 pred = model.predict(x_test[:2])
