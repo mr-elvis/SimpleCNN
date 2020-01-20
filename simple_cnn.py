@@ -77,3 +77,10 @@ pred = model.predict(x_test[:2])
 for i in range(len(x_test[:2])):
     print(pred[i].argmax())
 plt.imshow(pred)
+
+#You can also use this code to do prediction on a single image from the test set
+#Change image index number for other predicttions
+image_index_to_predict = 97
+plt.imshow(x_test[image_index_to_predict].reshape(28, 28),cmap='Greys')
+pred = model.predict(x_test[image_index_to_predict].reshape(1, 28, 28, 1))
+print(pred.argmax())
