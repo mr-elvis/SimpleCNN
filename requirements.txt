@@ -1,0 +1,8 @@
+install the the following libraries (pip install **library name)
+
+
+tensorflow (1.14)
+numpy
+matplotlib
+keras
+
