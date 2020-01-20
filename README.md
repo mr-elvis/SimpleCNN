@@ -20,7 +20,7 @@ The diagram below illustrates a simple CNN
 
 3. Flattening
 
-4. Fully Connection 
+4. Fully Connected layers 
 
    ***Parameters***: number of neurons, for the last layer(specify number of classes), activation function
 
@@ -28,8 +28,7 @@ The diagram below illustrates a simple CNN
 
    
 
-In this implementation we are going to use 
+## In this implementation we are going to use [keras](https://keras.io) to build the model
 
-[Keras]: https://keras.io/	"to build our model"
 
-Steps in Building a full 
+
