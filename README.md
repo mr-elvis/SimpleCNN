@@ -2,6 +2,7 @@
 
 ## Introduction
 ### Hand Written Digits recognition using the [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
+#### Open *simple_cnn.ipynb* to run code in blocks or open *simple_cnn.py* to run whole code
 
 CNN are multi-layer neural networks most commonly applied to analyzing visual imagery. 
 
