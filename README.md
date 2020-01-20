@@ -6,7 +6,7 @@ CNN are multi-layer neural networks most commonly applied to analyzing visual im
 
 The diagram below illustrates a simple CNN
 
-<img src="C:\Users\elvis\Documents\My Markdowns\simpleCNN.assets\cnn-1579247129441.png" style="zoom:80%;" />
+<img src="simpleCNN.assets/cnn-1579247129441.png" style="zoom:80%;" />
 
 **Major Steps in Building CNN**
 
