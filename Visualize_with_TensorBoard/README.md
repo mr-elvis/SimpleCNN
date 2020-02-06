@@ -1,4 +1,4 @@
-# **Simple Visualization of ML model with TensorBoard**
+# **Simple Visualization of Machine Learning model with TensorBoard**
 
 ### **What is TensorBoard**?
 
